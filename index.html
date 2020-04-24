@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generatore di Complotti - Covid Edition</title>
+
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- TITLE AND LOGO -->
+        <div class="main">
+            <!-- HEADING -->
+            <h1 class="heading">Generatore di complotti</h1>
+
+            <!-- IMAGES -->
+            <div class="image">
+                <img src="/assets/images/biohazard.png" alt="biohazard">
+            </div>
+
+            <div class="image">
+                <img src="/assets/images/biohazard.png" alt="biohazard">
+            </div>
+
+            <!-- SUBHEADING -->
+            <h2 class="subheading">Covid-19 Edition</h2>
+        </div>
+
+        <!-- FORM -->
+        <div class="form">
+            <p class="info">Compila i campi</p>
+            <!-- Month selector -->
+            <div class="form-item">
+                <label for="month">Mese di nascita</label>
+                <select name="month" id="month">
+                    <option value="0">Gennaio</option>
+                    <option value="1">Febbraio</option>
+                    <option value="2">Marzo</option>
+                    <option value="3">Aprile</option>
+                    <option value="4">Maggio</option>
+                    <option value="5">Giugno</option>
+                    <option value="6">Luglio</option>
+                    <option value="7">Agosto</option>
+                    <option value="8">Settembre</option>
+                    <option value="9">Ottobre</option>
+                    <option value="10">Novembre</option>
+                    <option value="11">Dicembre</option>
+                </select>
+            </div>
+
+            <!-- Day input -->
+            <div class="form-item">
+                <label for="day">Giorno di nascita</label>
+                <input type="text" name="day" id="day" maxlength="2">
+                <span id="day-error" class="error">Inserisci un valore compreso tra 1 e 31</span>
+            </div>
+
+            <!-- Name input -->
+            <div class="form-item">
+                <label for="name">Il tuo nome</label>
+                <input type="text" name="name" id="name" maxlength="20">
+                <span id="name-error" class="error">Inserisci un nome valido</span>
+            </div>
+
+            <!-- Color selector -->
+            <div class="form-item">
+                <label for="color">Colore preferito</label>
+                <select name="color" id="color">
+                    <option value="0">Blu</option>
+                    <option value="1">Rosso</option>
+                    <option value="2">Verde</option>
+                    <option value="3">Giallo</option>
+                    <option value="4">Nero</option>
+                    <option value="5">Bianco</option>
+                    <option value="6">Celeste</option>
+                    <option value="7">Viola</option>
+                    <option value="8">Rosa</option>
+                    <option value="9">Arancione</option>
+                    <option value="10">Altro</option>
+                </select>
+            </div>
+
+            <button id="submit">Genera!</button>
+        </div>
+
+        <!-- Generated plot -->
+        <div class="plot">
+            <img id="close-icon" src="/assets/images/cross.png" alt="close-icon">
+            <h3 class="plot-heading">Ecco qui la tua fantastica teoria di complotto:</h3>
+            <textarea readonly class="plot-content"></textarea>
+            <p class="plot-strapline">Puoi scrollare il testo in verticale.<br><br>Se vuoi svelare a tutti il tuo acume, clicca sul pulsante per copiare il testo e condividilo!</p>
+            <button id="plot-button">Copia</button>
+            <span class="plot-message">Testo copiato!</span>
+        </div>
+
+        <!-- BANNER -->
+        <div class="banner">
+            <p class="banner-text">Questa sito utilizza cookie, anche di terze parti.<br>
+            Se sei d'accordo, clicca su "okay", altrimenti chiudi la pagina.</p>
+            <button id="banner-dismiss">OKAY</button>
+        </div>
+
+        <!-- SCRIPT -->
+        <script src="/script.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-analytics.js"></script>
+
+        <script>
+            // Web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyDIiVm6ZWjkT55u5O1RXD-Z5Pq4EH8IqH4",
+                authDomain: "gomblotto-666.firebaseapp.com",
+                databaseURL: "https://gomblotto-666.firebaseio.com",
+                projectId: "gomblotto-666",
+                storageBucket: "gomblotto-666.appspot.com",
+                messagingSenderId: "944645444387",
+                appId: "1:944645444387:web:421d794a591d8f441db296",
+                measurementId: "G-TJ2997N1L2"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+    </body>
+
+</html>

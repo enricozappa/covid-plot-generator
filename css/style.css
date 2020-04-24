@@ -1,0 +1,314 @@
+body {
+    background-color: #212121;
+    font-family: 'Roboto', sans-serif;
+    padding: 0 25px;
+}
+
+/* Main container, text */
+/* ----------------------- */
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 50px;
+    position: relative;
+}
+
+.heading,
+.subheading {
+    color: #d08122;
+}
+
+.heading {
+    font-size: 40px;
+}
+
+.subheading {
+    font-size: 30px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+/* Image */
+/* ----------------------- */
+.image {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.image img {
+    height: 150px;
+}
+
+.image:last-of-type {
+    display: none;
+}
+
+/* Form */
+/* ----------------------- */
+.info {
+    color: #d08122;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.form-item {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+}
+
+.form-item {
+    margin-bottom: 30px;
+}
+
+label {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+select, input {
+    background-color: #d08122;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+}
+
+select {
+    height: 32px;
+    
+}
+
+.error {
+    bottom: -20px;
+    color: #ff0000;
+    left: 50%;
+    font-size: 13px;
+    position: absolute;
+    transform: translateX(-50%);
+    transition-duration: .3s;
+    width: max-content;
+}
+
+#name-error,
+#day-error {
+    opacity: 0;
+}
+
+#day {
+    width: 20px;
+}
+
+#submit {
+    background-color: #212121;
+    border-color: #d08122;
+    border-radius: 5px;
+    color: #d08122;
+    height: 40px;
+    margin-top: 10px;
+    transition-duration: .3s;
+    width: 100px;
+}
+
+#submit:hover {
+    background-color: #d08122;
+    border-color: #212121;
+    color: #212121;
+    cursor: pointer;
+}
+
+/* Generated Plot */
+/* ----------------------- */
+.plot {
+    align-items: center;
+    background-color: #151515;
+    border-radius: 10px;
+    color: #ffffff;
+    display: none;
+    flex-direction: column;
+    margin: 50px auto;
+    max-width: 500px;
+    padding: 50px 50px 30px;
+    position: relative;
+    text-align: center;
+}
+
+#close-icon {
+    height: 30px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+#close-icon:hover {
+    cursor: pointer;
+}
+
+.plot-heading {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.plot-content {
+    background-color: #151515;
+    border-radius: 5px;
+    color: #d08122;
+    font-size: 20px;
+    height: 120px;
+    margin-bottom: 20px;
+    max-width: 400px;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.plot-strapline {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+#plot-button {
+    background-color: #212121;
+    border-color: #d08122;
+    border-radius: 5px;
+    color: #d08122;
+    height: 40px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    transition-duration: .3s;
+    width: 100px;
+}
+
+#plot-button:hover {
+    background-color: #d08122;
+    border-color: #212121;
+    color: #212121;
+    cursor: pointer;
+}
+
+.plot-message {
+    color: #00ff00;
+    font-size: 12px;
+    opacity: 0;
+    transition-duration: .3s;
+}
+
+/* Banner */
+/* ----------------------- */
+.banner {
+    background-color: black;
+    bottom: 0;
+    left: 0;
+    padding: 30px 0;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
+}
+
+.banner-text {
+    color: #d08122;
+    font-size: 16px;
+    margin: 0 auto 15px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+#banner-dismiss {
+    background-color: #212121;
+    border-color: #d08122;
+    border-radius: 5px;
+    color: #d08122;
+    display: block;
+    font-size: 14px;
+    height: 30px;
+    margin: 0 auto;
+    transition-duration: .3s;
+    width: 60px;
+}
+
+#banner-dismiss:hover {
+    background-color: #d08122;
+    border-color: #212121;
+    color: #212121;
+    cursor: pointer;
+}
+
+/* Media Queries */
+/* ----------------------- */
+@media screen and (max-width: 425px) {
+    .main {
+        margin-top: 25px;
+    }
+
+    .heading {
+        font-size: 25px;
+    }
+
+    .subheading {
+        font-size: 20px;
+        margin-top: 21px;
+    }
+
+    .image {
+        margin: 0;
+        position: absolute;
+        top: 35px;
+    }
+
+    .image:first-of-type {
+        left: 0;
+    }
+
+    .image:last-of-type {
+        display: block;
+        right: 0;
+    }
+
+    .image img {
+        height: 40px;
+    }
+
+    .form {
+        margin: 30px 0;
+    }
+
+    .info {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    .plot {
+        padding: 37px 20px 10px;
+    }
+    
+    .plot-content {
+        font-size: 16px;
+        max-width: 220px;
+    }
+
+    #close-icon {
+        height: 15px;
+        right: 9px;
+        top: 11px;
+    }
+
+    .banner-text {
+        font-size: 12px;
+        max-width: 260px;
+    }
+}
